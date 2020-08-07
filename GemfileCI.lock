@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     turbo_test_static_analysis (0.1.0)
+      sorcerer
 
 GEM
   remote: https://rubygems.org/
@@ -42,6 +43,7 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
+    sorcerer (2.0.1)
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)

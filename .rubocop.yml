@@ -9,6 +9,7 @@ AllCops:
     - "**/*.gemfile"
     - bin/*
     - "*.gemspec"
+    - test/support/files/schemas/*.rb
 
 Layout/LineLength:
   Enabled: true
@@ -26,6 +27,8 @@ Metrics/ClassLength:
 
 Metrics/MethodLength:
   Max: 10
+  Exclude:
+      - test/**/*
 
 Style/ClassAndModuleChildren:
   Exclude:
