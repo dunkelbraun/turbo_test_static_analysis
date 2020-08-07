@@ -1,0 +1,41 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  Exclude:
+    - Gemfile
+    - "**/*.gemfile"
+    - bin/*
+    - "*.gemspec"
+
+Layout/LineLength:
+  Enabled: true
+  AutoCorrect: false
+  Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*_test.rb
+
+Metrics/ClassLength:
+  Exclude:
+      - test/**/*
+      - lib/tasks/*
+
+Metrics/MethodLength:
+  Max: 10
+
+Style/ClassAndModuleChildren:
+  Exclude:
+      - test/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  ConsistentQuotesInMultiline: true
+

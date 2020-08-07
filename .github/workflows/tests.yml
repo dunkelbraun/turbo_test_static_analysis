@@ -1,0 +1,42 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  test:
+    name: >-
+      Ruby: ${{ matrix.ruby }}
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [ '2.4', '2.5', '2.6', '2.7' ]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+
+    - name: Install dependencies
+      env:
+        BUNDLE_GEMFILE: GemfileCI
+      run: |
+        bundle config path vendor/bundle
+        bundle install --binstubs --jobs 4 --retry 3
+
+    - name: Run tests
+      env:
+        BUNDLE_GEMFILE: GemfileCI
+      run: |
+        bundle exec rake
+
+    # - name: Coveralls
+    #   if: ${{ matrix.ruby == '2.7' }}
+    #   env:
+    #     BUNDLE_GEMFILE: GemfileCI
+    #     COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+    #   run: |
+    #     bundle exec rake coveralls:push
