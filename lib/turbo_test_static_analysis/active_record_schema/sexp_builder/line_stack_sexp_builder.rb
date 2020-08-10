@@ -18,11 +18,6 @@ module TurboTest
           class_eval <<-RUBY, __FILE__, __LINE__ + 1
             def on_#{method}#{ARITIES[arity]}
               super.tap do |result|
-                # cont = '#{method} '
-                # cont += self.lineno.to_s
-                # cont += ":"
-                # cont += self.column.to_s
-                # puts cont
                 stack_line
               end
             end
