@@ -6,13 +6,13 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Marcos Essindi"]
   spec.email         = ["marcessindi@icloud.com"]
 
-  spec.summary       = "short summary"
-  spec.homepage      = "http://example.com"
+  spec.summary       = "Static analysis helpers"
+  spec.homepage      = "https://github.com/dunkelbraun/turbo_test_static_analysis"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "http://example.com"
+  spec.metadata["source_code_uri"] = "https://github.com/dunkelbraun/turbo_test_static_analysis"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
