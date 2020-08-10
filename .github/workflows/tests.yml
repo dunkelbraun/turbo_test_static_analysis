@@ -33,10 +33,10 @@ jobs:
       run: |
         bundle exec rake
 
-    # - name: Coveralls
-    #   if: ${{ matrix.ruby == '2.7' }}
-    #   env:
-    #     BUNDLE_GEMFILE: GemfileCI
-    #     COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-    #   run: |
-    #     bundle exec rake coveralls:push
+    - name: Coveralls
+      if: ${{ matrix.ruby == '2.7' }}
+      env:
+        BUNDLE_GEMFILE: GemfileCI
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      run: |
+        bundle exec rake coveralls:push
