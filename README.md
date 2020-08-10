@@ -1,3 +1,7 @@
+![Tests](https://github.com/dunkelbraun/turbo_test_static_analysis/workflows/Tests/badge.svg?branch=main)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b80b14e60467094e6c92/maintainability)](https://codeclimate.com/github/dunkelbraun/turbo_test_static_analysis/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/dunkelbraun/turbo_test_static_analysis/badge.svg?branch=main)](https://coveralls.io/github/dunkelbraun/turbo_test_static_analysis?branch=main)
+
 # TurboTestStaticAnalysis
 
 
